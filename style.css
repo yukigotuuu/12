@@ -39,9 +39,67 @@ main{
 
 .main-grid > div{
 	background-color: #fff;
+	display: grid;
+	text-align: center;
+	align-items: center;/* (上下) */
+
 }
 
 footer{
 	grid-area: footer;
 	background-color: #C9D97D;
+}
+
+
+/* 画面の小さいPC */
+@media screen and (min-width: 768px) and (max-width: 920px){
+	.main-grid{
+		grid-template-rows: repeat(4,20%);
+		grid-template-columns: repeat(3,20%);
+		background-color: #F6C9F2;
+	}
+}
+
+/* タブレット */
+@media screen and (min-width: 480px) and (max-width: 760px){
+	.main-grid{
+		grid-template-rows: repeat(6,15%);
+		grid-template-columns: repeat(2,40%);
+		grid-gap: 2%;
+	}
+
+	.main-grid > div:nth-child(2n){
+		background-color: #f00;
+	}
+}
+
+
+/* タブレットとスマホのときのみ適用 */
+@media screen and (max-width: 768px){
+	body{
+	color: red;
+	 } 
+	}
+
+
+/* スマホ */
+@media screen and (max-width: 480px){
+	body{
+	display: grid;
+	grid-template-areas: 'header'
+	                     'main'
+	                     'side'
+	                     'footer';
+	grid-template-rows: 10% 1fr 10% 10%;
+	grid-template-columns: 100%;
+	     }
+
+	.main-grid{
+		grid-template-rows: repeat(12,7.5%);
+		grid-template-columns: 80%;
+		grid-gap: 1%;
+	}
+
+	.
+
 }
