@@ -62,6 +62,17 @@ footer{
 
 /* タブレット */
 @media screen and (min-width: 480px) and (max-width: 760px){
+	.main-grid{
+		grid-template-rows: repeat(6,15%);
+		grid-template-columns: repeat(2,40%);
+		grid-gap: 2%;
+	}
+
+	.main-grid > div:nth-child(2n){
+		background-color: #f00;
+
+	}
+
 
 }
 
