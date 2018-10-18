@@ -70,13 +70,36 @@ footer{
 
 	.main-grid > div:nth-child(2n){
 		background-color: #f00;
+	}
+}
 
+
+/* タブレットとスマホのときのみ適用 */
+@media screen and (max-width: 768px){
+	body{
+	color: red;
+	 } 
 	}
 
 
-}
-
 /* スマホ */
 @media screen and (max-width: 480px){
+	body{
+	display: grid;
+	grid-template-areas: 'header'
+	                     'main'
+	                     'side'
+	                     'footer';
+	grid-template-rows: 10% 1fr 10% 10%;
+	grid-template-columns: 100%;
+	     }
+
+	.main-grid{
+		grid-template-rows: repeat(12,7.5%);
+		grid-template-columns: 80%;
+		grid-gap: 1%;
+	}
+
+	.
 
 }
